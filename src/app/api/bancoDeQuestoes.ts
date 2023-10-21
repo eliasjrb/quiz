@@ -4,7 +4,7 @@ import RespostaModel from "@/model/resposta";
 const questoes: QuestaoModel[] = [
     new QuestaoModel(
         1,
-        `. O objetivo do Secure Socket Layer (SSL) é prover
+        `O objetivo do Secure Socket Layer (SSL) é prover
         autenticidade, privacidade e integridade às conexões
         entre cliente e servidor, sendo usado, na maioria das
         vezes, em conjunto com o protocolo HTTP. Para fornecer

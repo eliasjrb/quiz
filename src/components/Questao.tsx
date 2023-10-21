@@ -38,7 +38,7 @@ export default function Questao(props: QuestaoProps) {
     }
 
     return (
-        <div className={styles.questao}>
+        <div className="w-full flex flex-col justify-center items-center">
             <Enunciado texto={questao.enunciado} />
             <Temporizador key={questao.id}
                 duracao={props.tempoPraResposta ?? 10}
