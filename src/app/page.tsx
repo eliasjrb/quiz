@@ -4,7 +4,9 @@ import { Questionario } from '@/components/Questionario'
 import QuestaoModel from '@/model/questao'
 import { useRouter } from 'next/navigation'
 
-const BASE_URL = 'http://localhost:3000/api'
+const BASE_URL = 'https://quiz-delta-five.vercel.app/api'
+// const vari = process.env.PROJECT_URL
+
 
 export default function Home() {
   
@@ -14,13 +16,13 @@ export default function Home() {
   const [respostasCertas, setRespostasCertas] = useState<number>(0)
 
   async function carregarIdsDasQuestoes() {
-    const resp = await fetch(`${BASE_URL}/questionario`)
+    const resp = await fetch(`${BASE_URL}/api/questionario`)
     const idsDasQuestoes = await resp.json()
     setIdsDasQuestoes(idsDasQuestoes)
   }
 
   async function carregarQuestao(idQuestao: number) {
-    const resp = await fetch(`${BASE_URL}/questoes?id=${idQuestao}`)
+    const resp = await fetch(`${BASE_URL}/api/questoes?id=${idQuestao}`)
     const json = await resp.json()
     
     const novaQuestao = QuestaoModel.criarUsandoObjeto(json)
