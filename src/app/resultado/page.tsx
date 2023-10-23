@@ -18,11 +18,12 @@ export default function Resultado() {
             <div style={{ display: "flex" }}>
                 <Estatistica texto="Perguntas" valor={total} />
                 <Estatistica texto="Certas" valor={certas}
-                    corFundo="#9CD2A4"/>
+                    corFundo="#4cdf62"/>
                 <Estatistica texto="Percentual" valor={`${percentual}%`}
                     corFundo="#DE6A33" />
             </div>
-            <Botao href="/" texto="Tentar Novamente" />
+            <Botao href="/perguntas" texto="Tentar Novamente" />
+            <Botao href="/" texto="Voltar para tela inicial" />
         </div>
     )
 }
