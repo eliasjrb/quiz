@@ -1,6 +1,10 @@
 .enunciado {
     display: flex;
     text-align: center;
+    background-color: rgb(226, 239, 250);
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .texto {

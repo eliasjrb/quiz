@@ -16,13 +16,8 @@ export default function Temporizador(props: TemporizadorProps) {
                 size={120}
                 isPlaying
                 onComplete={props.tempoEsgotado}
-                colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-                colorsTime={[7, 5, 2, 0]}
-                // colors={[
-                //     ['#BCE596', 0.33],
-                //     ['#F7B801', 0.33],
-                //     ['#ED827A', 0.33],
-                // ]}
+                colors={['#008d3f', '#b0f530', '#e7fa79', '#e40707']}
+                colorsTime={[45, 30, 15, 0]}
                 >
                 {({ remainingTime }) => remainingTime}
             </CountdownCircleTimer>
