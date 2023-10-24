@@ -7,7 +7,7 @@
     font-size: 2rem;
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     .resultado {
         display: flex;
         flex-direction: column;
@@ -16,4 +16,5 @@
         height: 100vh;
         font-size: 2rem;
     }
+
 }

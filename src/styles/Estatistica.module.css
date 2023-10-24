@@ -1,34 +1,10 @@
-.estatistica {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.valor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 180px;
-    width: 180px;
-    border-radius: 90px;
-    font-size: 4rem;
-}
-
-.texto {
-    color: #ddd;
-    font-size: 1.7rem;
-    font-weight: 200;
-}
-
-@media (max-width: 768px) {
     .estatistica {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 5px;
     }
-    
+
     .valor {
         display: flex;
         justify-content: center;
@@ -38,10 +14,34 @@
         border-radius: 90px;
         font-size: 2rem;
     }
-    
+
     .texto {
         color: #ddd;
         font-size: 1.2rem;
         font-weight: 200;
     }
-}
+
+    @media only screen and (min-width: 768px) {
+        .estatistica {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .valor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 180px;
+            width: 180px;
+            border-radius: 90px;
+            font-size: 4rem;
+        }
+
+        .texto {
+            color: #ddd;
+            font-size: 1.7rem;
+            font-weight: 200;
+        }
+    }
