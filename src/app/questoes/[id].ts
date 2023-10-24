@@ -2,7 +2,6 @@ import questoes from '../bancoDeQuestoes'
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function questoesProId(req: NextApiRequest, res: NextApiResponse) {
-    // const idSelecionado = +req.query.id
     const idSelecionado = +req
 
     const unicaQuestaoOuNada = questoes.filter(questao => questao.id === idSelecionado)

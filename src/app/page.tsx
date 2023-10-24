@@ -30,6 +30,9 @@ export default function Home() {
         <div className="flex justify-center items-centerflex">
           <Link className="bg-indigo-500 text-center p-5 hover:scale-110 border grow border-indigo-600 text-gray-200 rounded-lg w-fuul h-full" href="/perguntas?mat=3">História</Link>
         </div>
+        <div className="flex justify-center items-centerflex">
+          <Link className="bg-indigo-500 text-center p-5 hover:scale-110 border grow border-indigo-600 text-gray-200 rounded-lg w-fuul h-full" href="/perguntas?mat=4">Ângulos e Circuferência</Link>
+        </div>
       </div>
     </div >
   )

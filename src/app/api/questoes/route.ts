@@ -2,9 +2,10 @@ import portugues from '../bancoDeQuestoesPortugues'
 import matematica from '../bancoDeQuestoesMatematica'
 import ciencia from '../bancoDeQuestoesCiencia'
 import historia from '../bancoDeQuestoesHistoria'
+import anguloECircuferencia from '../bancoDeQuestoesAnguloECircuferencia'
 import { NextResponse } from "next/server";
 
-const materias = [portugues, matematica, ciencia, historia]
+const materias = [portugues, matematica, ciencia, historia, anguloECircuferencia]
 
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url)
