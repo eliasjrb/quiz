@@ -6,3 +6,14 @@
     height: 100vh;
     font-size: 2rem;
 }
+
+@media (max-width: 768px) {
+    .resultado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 2rem;
+    }
+}

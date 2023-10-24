@@ -5,3 +5,14 @@
     align-items: center;
     height: 100vh;
 }
+
+/* @media (min-width: 768px) {
+    .questionario {
+        display: block;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+} */

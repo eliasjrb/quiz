@@ -1,8 +1,8 @@
 import { embaralhar } from '@/functions/arrays'
-import questoes from '../bancoDeQuestoes'
-import { NextRequest, NextResponse } from "next/server";
+import portugues from '../bancoDeQuestoesPortugues'
+import { NextResponse } from "next/server";
 
-export function GET(req: NextRequest, res: NextResponse) {
-    const ids = questoes.map(questao => questao.id)
+export function GET(req: Request) {
+    const ids = portugues.map(questao => questao.id)
     return NextResponse.json(embaralhar(ids))
 }

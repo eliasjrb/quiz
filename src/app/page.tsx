@@ -17,8 +17,19 @@ export default function Home() {
         <p className="text-green-400 delay-75 duration-100 animacao-quiz-a">I</p>
         <p className="text-yellow-400  delay-100 duration-100 animacao-quiz-b">Z</p>
       </h1>
-      <div className="bg-indigo-500 border border-indigo-600 text-gray-200 rounded-lg">
-        <Link className="p-5"  href="/perguntas">Começar agora</Link>
+      <div className="w-w-3/5 items-center grid grid-rows-2 grid-cols-2 gap-3">
+        <div className="flex justify-center items-center">
+          <Link className="bg-indigo-500 text-center p-5 hover:scale-110 grow border border-indigo-600 text-gray-200 rounded-lg w-fuul h-full" href="/perguntas?mat=0">Língua Portuguesa</Link>
+        </div>
+        <div className="flex justify-center items-centerflex">
+          <Link className="bg-indigo-500 text-center p-5 hover:scale-110 grow border border-indigo-600 text-gray-200 rounded-lg w-fuul h-full" href="/perguntas?mat=1">Matemática</Link>
+        </div>
+        <div className="flex justify-center items-centerflex">
+          <Link className="bg-indigo-500 text-center p-5 hover:scale-110 border grow border-indigo-600 text-gray-200 rounded-lg w-fuul h-full" href="/perguntas?mat=2">Ciências</Link>
+        </div>
+        <div className="flex justify-center items-centerflex">
+          <Link className="bg-indigo-500 text-center p-5 hover:scale-110 border grow border-indigo-600 text-gray-200 rounded-lg w-fuul h-full" href="/perguntas?mat=3">História</Link>
+        </div>
       </div>
     </div >
   )

@@ -1,13 +1,20 @@
-import questoes from '../bancoDeQuestoes'
+import portugues from '../bancoDeQuestoesPortugues'
+import matematica from '../bancoDeQuestoesMatematica'
+import ciencia from '../bancoDeQuestoesCiencia'
+import historia from '../bancoDeQuestoesHistoria'
 import { NextResponse } from "next/server";
+
+const materias = [portugues, matematica, ciencia, historia]
 
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url)
     const query = searchParams.get("id")
+    const paramMateria:any = searchParams.get("mat")
+    console.log("aqui"+paramMateria + query)
 
     const idSelecionado = query ? +query : 0
 
-    const unicaQuestaoOuNada = questoes.filter(questao => questao.id === idSelecionado)
+    const unicaQuestaoOuNada = materias[+paramMateria].filter(questao => questao.id === idSelecionado)
 
     if (unicaQuestaoOuNada.length === 1) {
         const questaoSelecionada = unicaQuestaoOuNada[0].embaralharRespostas()

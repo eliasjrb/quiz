@@ -2,7 +2,7 @@
     display: flex;
     min-width: 500px; 
     width: 80%;
-    height: 100px;
+    height: 100%;
     margin: 10px;
     perspective: 1000px;
 }
@@ -77,4 +77,88 @@
 .valor {
     font-size: 1rem;
     font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .resposta {
+        display: flex;
+        min-width: 200px; 
+        width: 95%; 
+        height: 80px;
+        margin: 10px;
+    }
+    
+    .conteudoResposta {
+        position: relative;
+        display: flex;
+        flex: 1;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .respostaRevelada.conteudoResposta {
+        transform: rotateY(180deg);
+    }
+    
+    .frente, .verso {
+        position: absolute;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .frente {
+        align-items: center;
+        border-radius: 12px;
+        padding: 5px;
+        color: #000;
+        background-color: #fff;
+    }
+    
+    .verso {
+        transform: rotateY(180deg);
+    }
+    
+    .verso > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        border-radius: 12px;
+    }
+    
+    .certa {
+        background-color: #2BAA6D;
+        text-align: center;
+    }
+    
+    .errada {
+        background-color: #E44A4C;
+        text-align: center;
+    }
+    
+    .certa .valor, .errada .valor {
+        font-size: 0.8rem;
+    }
+    
+    .letra {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 20px;
+        border-radius: 20px;
+        font-size: 0.6rem;
+        margin-right: 5px;
+        font-weight: 400;
+        color: #fff;
+    }
+    
+    .valor {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
 }

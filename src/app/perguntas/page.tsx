@@ -2,12 +2,15 @@
 import { useEffect, useState } from 'react'
 import { Questionario } from '@/components/Questionario'
 import QuestaoModel from '@/model/questao'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Perguntas() {
 
     const router = useRouter()
+    const searchParams = useSearchParams();
+    const material:any = searchParams.get('mat')
+
     const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([])
     const [questao, setQuestao] = useState<QuestaoModel>()
     const [respostasCertas, setRespostasCertas] = useState<number>(0)
@@ -19,7 +22,7 @@ export default function Home() {
     }
 
     async function carregarQuestao(idQuestao: number) {
-        const resp = await fetch(`/api/questoes?id=${idQuestao}`)
+        const resp = await fetch(`/api/questoes?id=${idQuestao}&mat=${material}`)
         const json = await resp.json()
 
         const novaQuestao = QuestaoModel.criarUsandoObjeto(json)
