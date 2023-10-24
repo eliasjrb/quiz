@@ -10,7 +10,6 @@ export async function GET(req: Request) {
     const { searchParams } = new URL(req.url)
     const query = searchParams.get("id")
     const paramMateria:any = searchParams.get("mat")
-    console.log("aqui"+paramMateria + query)
 
     const idSelecionado = query ? +query : 0
 

@@ -10,6 +10,7 @@ export default function Resultado() {
 
     const total:any = searchParams.get('total')
     const certas:any = searchParams.get('certas')
+    const materia:any = searchParams.get('mat')
     const percentual = Math.round((+certas / +total) * 100)
 
     return (
@@ -22,7 +23,7 @@ export default function Resultado() {
                 <Estatistica texto="Percentual" valor={`${percentual}%`}
                     corFundo="#DE6A33" />
             </div>
-            <Botao href="/perguntas" texto="Tentar Novamente" />
+            <Botao href={`/perguntas?mat=${materia}`} texto="Tentar Novamente" />
             <Botao href="/" texto="Voltar para tela inicial" />
         </div>
     )

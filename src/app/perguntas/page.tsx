@@ -9,7 +9,7 @@ export default function Perguntas() {
 
     const router = useRouter()
     const searchParams = useSearchParams();
-    const material:any = searchParams.get('mat')
+    const materia:any = searchParams.get('mat')
 
     const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([])
     const [questao, setQuestao] = useState<QuestaoModel>()
@@ -22,7 +22,7 @@ export default function Perguntas() {
     }
 
     async function carregarQuestao(idQuestao: number) {
-        const resp = await fetch(`/api/questoes?id=${idQuestao}&mat=${material}`)
+        const resp = await fetch(`/api/questoes?id=${idQuestao}&mat=${materia}`)
         const json = await resp.json()
 
         const novaQuestao = QuestaoModel.criarUsandoObjeto(json)
@@ -58,7 +58,7 @@ export default function Perguntas() {
     }
 
     function finalizar() {
-        router.push(`/resultado?total=${idsDasQuestoes.length}&certas=${respostasCertas}`);
+        router.push(`/resultado?total=${idsDasQuestoes.length}&certas=${respostasCertas}&mat=${materia}`);
     }
 
     return (
